@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>模板</title>
+    <style>
+        body{width:100%;background: rgba(174, 255, 183, 0.45);}
+        .header{width:80%;margin:0 auto;height:150px;text-align:center;background: url(img/bg6.jpg);border:1px solid #000;border-radius:50%;}
+        .header h1{font-size:70px;color:#fff;}
+        .main{margin:20px auto;background:url(img/bg1.jpg);width:80%;height:680px;border:1px solid rgba(128, 128, 128, 0.3);border-radius:20px;}
+        li{list-style:none;}
+        .main ul li{border-radius:50%;width:260px;height:260px;margin:25px;border:1px solid #fff;box-shadow:0 0 35px rgba(102, 102, 102, 0.59);float:left;}
+        .main ul li img{width:260px;height:260px;border-radius:50%;}
+        #bigImg{width:700px;height:900px;position:absolute;left:200px;top:200px;display:none;}
+      /* .main ul li img:hover{width:320px;height:300px;border-radius:50%;}*/
+
+    </style>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script>
+       $(function(){
+           function blink(selector){
+               $(".header h1").fadeOut('5000', function(){
+                   $(this).fadeIn('5000', function(){
+                       blink(this);
+                   });
+               });
+           }
+           $(".header").ready(function(){
+               blink('.blink');
+           });
+          // sImg = $(this).find("img").attr("src");//获取小图地址
+           //alert(sImg);
+          /* _index=$(this).index();//alert(_index);
+           bImg=sImg.replace("s_","");//alert(bImg);获取大图地址
+           $(".bigImg img").attr("src",bImg);//把小图替换成大图
+           $(".imgList").hide();//隐藏图片列表*/
+           $("#pic li").mouseenter(function(){//alert(1);
+               var sImg= $(this).find("img").attr("src");//alert(s_img);
+               var _index=$(this).index();
+                   bImg = sImg.replace("s_","");
+               $("#bigImg").attr("src",bImg);
+
+
+
+           });
+
+       });
+
+
+    </script>
+</head>
+<body>
+<div class="header">
+    <h1><span style="color:red;">个人</span><span style="color:blue;">模板</span><span style="color:pink;">展示</span></h1>
+</div>
+<div class="main">
+    <div style="width:96%;height:780px;margin:2%;">
+        <ul id="pic">
+            <li><img src="img/s_mod.jpg"></li>
+            <li><img src="img/s_mod1.png"></li>
+            <li><img src="img/s_mod2.jpg"></li>
+            <li><img src="img/s_mod3.jpg"></li>
+            <li><img src="img/s_mod4.jpg"></li>
+            <li><img src="img/s_mod5.png"></li>
+        </ul>
+
+    </div>
+
+
+</div>
+<div class="bototm"></div>
+</body>
+</html>

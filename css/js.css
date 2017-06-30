@@ -1,0 +1,35 @@
+body{width:100%;height:2000px;background: #ffefaa;}
+.header{background:url(../img/bg7.jpg);width:80%;height:150px;border:5px solid #fff;box-shadow:0 0 10px blue;border-radius:50%;margin:0 auto;}
+.main{width:80%;height:800px;margin:10px auto;}
+li{list-style:none;}
+.main ul .li1{width:30%;height:700px;margin:5px 1%;box-shadow:0 0 10px gray;border:3px solid rgba(0, 0, 0, 0.68);border-radius:20px;float:left;}
+ .main ul li h1{color: rgba(0, 0, 0, 0.8);text-align:center;}
+#div1{width:90%;margin:0 auto;height:300px;border-radius:10px;}
+.li1 p{color:#666;font-size:14px;}
+
+#book{counter-reset:page;position:relative;width:260px;height:250px;right:-20px;top:25px;}
+#book li{transform-style:preserve-3d;transition:all 0.5s;box-shadow:0 0 12px #808080;background:rgba(255,255,255,0.6);position:absolute;top:0;width:130px;padding:10px;height:230px;list-style:none;}
+#book li img{width:130px;height:230px;}
+#book li:nth-child(odd){transform-origin:0 50% 0;left:50%;transform:rotateY(0deg);opacity:1;}
+#book li:nth-child(even){transform-origin:100% 50% 0;left:0;transform:rotateY(180deg);opacity:0;}
+#book li.rl:nth-child(odd){transform:rotateY(180deg);opacity:0;}
+#book li.rl:nth-child(even){transform:rotateY(0deg);opacity:1;}
+#book li:nth-child(odd)::before{right:0;}
+#book li:nth-child(even)::before{left:0;}
+#book li::before{content:counter(page);color:#000;counter-increment:page;position:absolute;padding:18px;bottom:0;}
+#book li:after{box-shadow:-1px -1px 12px #e0e0e0;transition:all 0.3s;width:0;height:0;content:"";bottom:0;position:absolute;}
+#book li:nth-child(odd)::after{right:0;background: linear-gradient(-45deg,transparent 50%,#eee 50%,#fff 90%);}
+#book li:nth-child(even)::after{left:0;background: linear-gradient(45deg,transparent 50%,#eee 50%,#fff 90%);}
+#book li:hover::after{width:35px;height:35px;}
+
+
+.dome{width:96%;height:260px;margin-top:100px;margin-left:2%;}
+.dome ul{width:96%;height:230px;}
+.dome ul li img{transition:all 1s linear;margin:5px;width:60px;height:60px;}
+.dome ol {margin-left:30px;background:pink;}
+.dome ol li {cursor:pointer;margin:10px;float:left;width:20px;height:20px;line-height:20px;text-align:center;border-radius:50%;background:gray;font-size:18px;color:#fff;font-weight:bold;}
+.dome ol li.on{box-shadow:1px 1px 1px #000;background:red;}
+.dome ul li img.rotx{transform:rotateX(360deg);}
+.dome ul li img.roty{transform:rotateY(360deg);}
+.dome ul li img.rot{transform:rotateZ(360deg);}
+.dome ul li img:hover{transform:rotate(360deg);}

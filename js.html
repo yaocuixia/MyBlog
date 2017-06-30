@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/js.js"></script>
+    <script>
+        window.onload=function(){
+            var count=0;
+            var pic_arr=new Array( 'img/35.jpg','img/30.jpg','img/31.jpg','img/32.jpg','img/33.jpg','img/34.jpg');
+            function test(){
+                var oDiv=document.getElementById('div1');//alert(oDiv);
+                oDiv.style.background="url("+pic_arr[count]+")";
+                count++;
+                if(count>5){
+                    count=0;
+                    oDiv.style.background="url("+pic_arr[count]+")";
+                }
+            }
+            setInterval(function(){
+                test();
+            },800);
+   //动态添加钟表
+            var oList=document.getElementById("list");
+            var aLi="";
+            var oCss=document.getElementById("css");
+            var sCss="";
+            var oHour=document.getElementById("hour");
+            var oMin=document.getElementById("min");
+            var oSec=document.getElementById("sec");
+            for(var i=0;i<60;i++){
+                sCss+="#wrap ul li:nth-of-type("+(i+1)+"){  -webkit-transform: rotate("+i*6+"deg);}";
+                aLi+="<li></li>"
+            }
+            oList.innerHTML=aLi;
+            oCss.innerHTML+=sCss;
+            toTime();
+            setInterval(toTime,1000);
+            function toTime(){
+                var oDate=new Date();
+                var iSec=oDate.getSeconds();
+                var iMin=oDate.getMinutes()+iSec/60;
+                var iHour=oDate.getHours()+iMin/60;
+                oSec.style.WebkitTransform="rotate("+iSec*6+"deg)";
+                oMin.style.WebkitTransform="rotate("+iMin*6+"deg)";
+                oHour.style.WebkitTransform="rotate("+iHour*30+"deg)";
+            }
+
+
+
+
+        };
+    </script>
+    <style id="css">
+        #wrap{
+            width:200px;height:200px;
+            border:5px solid #000;
+            margin:30px auto;
+            border-radius:50%;
+            position: relative;
+        }
+        #wrap ul{
+            margin:0;padding:0;
+            height:200px;
+            position:relative;;
+            list-style:none;
+        }
+        #wrap ul li{
+            width:2px;height:6px;
+            background:#000;position:absolute;
+            left:99px;top:0;
+            -webkit-transform-origin:center 100px;
+        }
+        /* #wrap ul li:nth-of-type(1){  -webkit-transform: rotate(0deg);}
+         #wrap ul li:nth-of-type(2){  -webkit-transform: rotate(6deg);}
+         #wrap ul li:nth-of-type(3){  -webkit-transform: rotate(12deg);}
+         #wrap ul li:nth-of-type(4){  -webkit-transform: rotate(18deg);}
+         #wrap ul li:nth-of-type(5){  -webkit-transform: rotate(24deg);}
+         #wrap ul li:nth-of-type(6){  -webkit-transform: rotate(30deg);}
+         #wrap ul li:nth-of-type(7){  -webkit-transform: rotate(36deg);}
+         #wrap ul li:nth-of-type(8){  -webkit-transform: rotate(42deg);}*/
+        #wrap ul li:nth-of-type(5n+1){ height:12px;}
+        #hour{  width:6px;height:45px;background: #0e34ff;  position:absolute;left:97px;top:55px;border-radius:4px;
+            -webkit-transform-origin:bottom;}
+        #min {  width:4px;height:65px;background: #996134;  position:absolute;left:98px;top:35px;border-radius:4px;
+            -webkit-transform-origin:bottom;}
+        #sec {  width:2px;height:80px;background:red;  position:absolute;left:99px;top:20px;border-radius:4px;
+            -webkit-transform-origin:bottom;}
+        .ico {  width:10px;height:10px;  background:#000;border-radius:50%;  position:absolute;left:95px;top:95px;  }
+    </style>
+    <link rel="stylesheet" href="css/js.css" type="text/css" />
+</head>
+<body>
+    <div class="header">
+	
+
+    </div>
+    <div class="main">
+		
+        <ul>
+            <li class="li1">
+                <h1>js实现图片自动轮询</h1>
+                <div id="div1"></div>
+                <h1>css3</h1>
+                <div id="wrap">
+                    <ul id="list">
+
+                    </ul>
+                    <div id="hour"></div>
+                    <div id="min"></div>
+                    <div id="sec"></div>
+                    <div class="ico"></div>
+                </div>
+            </li>
+
+            <li class="li1">
+                <h1>翻页相册</h1>
+                <div id="book">
+                    <ul>
+                        <li><img src="img/book001.jpg"></li>
+                        <li><img src="img/36.jpg"></li>
+                        <li><img src="img/18.jpg"></li>
+                        <li><img src="img/2.png"></li>
+                        <li><img src="img/19.jpg"></li>
+                        <li><img src="img/3.png"></li>
+                        <li><img src="img/2.jpg"></li>
+                        <li><img src="img/4.png"></li>
+                        <li><img src="img/20.jpg"></li>
+                        <li><img src="img/5.jpg"></li>
+                        <li><img src="img/21.jpg"></li>
+                        <li><img src="img/5.png"></li>
+                        <li><img src="img/22.jpg"></li>
+                        <li><img src="img/6.jpg"></li>
+                        <li><img src="img/23.jpg"></li>
+                        <li><img src="img/7.jpg"></li>
+                        <li><img src="img/24.jpg"></li>
+                        <li><img src="img/8.jpg"></li>
+                        <li><img src="img/1.jpg"></li>
+                        <li><img src="img/9.jpg"></li>
+                        <li><img src="img/10.jpg"></li>
+                        <li><img src="img/11.jpg"></li>
+                        <li><img src="img/12.jpg"></li>
+                        <li><img src="img/13.jpg"></li>
+                        <li><img src="img/14.jpg"></li>
+                        <li><img src="img/5.jpg"></li>
+                        <li><img src="img/15.jpg"></li>
+                        <li><img src="img/4.jpg"></li>
+                        <li><img src="img/16.jpg"></li>
+                        <li><img src="img/3.jpg"></li>
+                        <li><img src="img/17.jpg"></li>
+                        <li><img src="img/book002.jpg"></li>
+                    </ul>
+                </div>
+                <div class="dome">
+                    <ul>
+                        <li>
+                            <img src="img/1-1.jpg">
+                            <img src="img/1-2.jpg">
+                            <img src="img/1-3.jpg">
+                            <img src="img/12.jpg">
+                            <img src="img/13.jpg">
+                            <img src="img/14.jpg">
+                            <img src="img/26.jpg">
+                            <img src="img/28.jpg">
+                            <img src="img/29.jpg">
+                        </li>
+                    </ul>
+                    <ol>
+                        <li class="on">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                    </ol>
+                </div>
+            </li>
+            <li class="li1">
+                <h1>js简介</h1>
+                <p style="font-size:16px;color:blue;">1.js介绍：</p>
+                <p>  &nbsp &nbsp <span style="color:red;">JavaScript</span> 是世界上最流行的编程语言。
+                    这门语言可用于 HTML 和 web，
+                    更可广泛用于服务器、PC、笔记本电脑、平板电脑和智能手机等设备。
+                </p>
+                <p>&nbsp &nbsp<span style="color:red;"> JavaScript</span> 是脚本语言</p>
+                <p>&nbsp &nbsp JavaScript 是一种轻量级的编程语言。</p>
+                <p>&nbsp &nbsp <span style="color:red;">JavaScript</span> 是可插入 HTML 页面的编程代码。</p>
+                <p>&nbsp &nbsp <span style="color:red;">JavaScript</span> 插入 HTML 页面后，可由所有的现代浏览器执行。</p>
+                <p style="font-size:16px;color:blue;">2.JS组成：</p>
+                <p>&nbsp &nbsp 1.ECMAScript，描述语法和基本对象。</p>
+                <p> &nbsp &nbsp 2.文档对象模型（DOM），描述处理网页内容的方法和接口。</p>
+                <p>&nbsp &nbsp 3.浏览器对象模型（BOM），描述与浏览器进行交互的方法和接口。</p>
+                <p style="font-size:16px;color:blue;">3.js的应用范围：</p>
+                <p>&nbsp &nbsp 当<span style="color:red;"> Javascript </span>第一次出现的时候，是为了给页面带来更多的动态，使得用户可以与页面进行交互为目的的。现在的 Javascript 大多运行与客户端，但是仍有部分运行于服务器端，如 Servlet，ASP 等，当然，Javascript 作为一个独立的语言，同样可以运行在其他的应用程序中，比如 Java 版的 JavaScript 引擎 Rhino，C 语言版的SpiderMonkey 等，使用这些引擎，可以将 JavaScript 应用在任何应用之中。</p>
+
+
+
+
+
+
+
+            </li>
+        </ul>
+    </div>
+    <div class="botom">
+
+    </div>
+
+</body>
+</html>

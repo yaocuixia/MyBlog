@@ -1,0 +1,75 @@
+*{margin:0;padding:0;}
+li{}
+#all{width:100%;height:2020px;background: rgba(0, 0, 0, 0.85);margin:0 auto;}
+/*头部*/
+a{text-decoration: none;}
+#header{width:100%;height:300px;}
+.header_nav{width:89%;height:50px;background:rgba(0,0,0,0.6);margin:0 auto;border-radius:5px;}
+.header_nav ul li{list-style:none;width:131px;height:50px;line-height:50px;color:#fff;text-align:center;border-radius:5px;float:left;padding:1px;margin:2px 0;}
+.header_nav ul li a{color:#fff;}
+.header_nav ul li:hover{cursor:pointer;width:128px;height:48px;background:rgba(0,0,0,0.7);}
+.header_main{width:89%;height:240px;margin:0 auto;}
+.header_left{width:60%;height:240px;margin-top:10px;float:left;}
+.header_left img{width:100%;height:240px;border-radius:5px;}
+.header_right{width:32%;height:232px;border-radius:15px;float:right;background:rgba(0,0,0,0.2);margin-top:10px;}
+.mycard{width:98%;height:230px;margin:1%;}
+.mycard h3{width:100%;height:35px;line-height:35px;color:rgba(102, 102, 102, 0.4);}
+.mycard .data{width:80%;height:180px;margin:10px auto;color:#fff;}
+.mycard .data p{margin-top:8px;}
+.mycard .data .pic{width:100%;height:70px;margin-top:10px;}
+.mycard .data .pic li{list-style:none;width:50px;height:50px;float:left;border-radius:50%;margin:8px 4px;background:rgba(0,0,0,0.4);box-shadow:0 0 20px rgba(0,0,0,0.3);border:1px solid rgba(0,0,0,0.8);}
+.mycard .data .pic li img{width:30px;height:30px;margin:10px;}
+
+#main{width:100%;height:1400px;}
+/*左半部分*/
+#main .main_left{width:60%;height:1400px;float:left;}
+#main .main_left ul{width:96%;height:auto;margin:6%;}
+#main .main_left ul li{list-style:none;background: rgba(0, 0, 0, 0.43);width:90%;box-shadow:0 0 0 5px;height:210px;margin:7% 5%;border-radius:5px;}
+#main .main_left ul li div{width:96%;height:160px;margin:2% ;}
+#main .main_left ul li p{width:100%;height:35px;line-height:45px;background: rgba(0, 0, 0, 0.54);}
+#main .main_left ul li h2{color: rgba(255, 255, 255, 0.77);font-size:17px;width:100%;height:30px;line-height:30px;}
+#main .main_left ul li dt{width:30%;height:120px;border-radius:5px;float:left;}
+#main .main_left ul li dt img{width:100%;height:120px;border-radius:5px;}
+#main .main_left ul li dd{width:66%;height:120px;float:right;}
+.Limittext{   height:auto;width:100%; position:relative;font-size:14px; color: rgba(255, 255, 255, 0.81);  }
+.Limittext  .switch ,.switch1,.switch2,.switch3,.switch4{ position:absolute;bottom:50px;right:20px;  }
+#text1{cursor: pointer;}
+#main .main_left p img{width:16px;height:16px;margin:5px;}
+#main .main_left p span{color:#666;font-size:12px;}
+.linear{width:3px;height:1380px;background:rgba(0,0,0,0.6);float:left;position:absolute;right:34.6%;}
+
+/*右半部分*/
+#main .main_right{width:30%;height:1380px;margin-right:50px;float:right;}
+#main .main_right ul li{color:#fff;background:rgba(0,0,0,0.6);border-radius:6px;box-shadow:0 0 5px #000;border:1px solid #000;width:100%;height:210px;margin-top:54px;}
+#main .main_right ul li .img1{width:120px;height:120px;border-radius:5px;}
+#main .main_right ul li .img_left{width:90%;height:150px;margin:2%;color:#fff;}
+#main .main_right ul li h2{color:#fff;height:35px;line-height:35px;}
+.pic_show img{width:80px;height:55px;}
+.pic_show span img{width:15px;height:15px;}
+.mp3 p{margin-top:6px;color:#668dff;}
+.mp3 p  a{text-decoration: none;color:#ff6b3d;font-size:17px;}
+.artic p{margin-top:5px;}
+.active{color:red;}
+.artic p{font-size:15px;}
+.artic p span{font-size:25px;font-weight:555;}
+.artic p span:hover{color:red;font-size:28px;}
+
+.div1{width:90%;height:170px;margin:2px 5%;}
+.div1 p{font-size:14px;margin-top:8px;}
+.left1{width:130px;height:150px;float:left;}
+.left2{width:220px;height:150px;float:right;}
+.left2 span{font-size:15px;font-weight:500;}
+.left2 span img{width:12px;height:12px;}
+
+/*底部*/
+#bottom{width:100%;height:320px;background: rgba(0, 0, 0, 0.66);}
+#bottom ul li{list-style:none;}
+#bottom .bottom_main{width:100%;height:280px;}
+#bottom .bottom_bom{width:100%;height:40px;text-align:center;line-height:40px;color:#fff;background: rgba(0, 0, 0, 0.62);}
+#bottom_left{width:70%;height:280px;margin-left:10px;float:left;}
+#bottom_left ul li img{width:60px;height:60px;margin:5px;border-radius:50%;}
+#bottom_left ul li span{margin-left:20px;}
+#bottom_right{width:40%;height:240px;float:right;margin-right:-150px;}
+#bottom_right ul{width:62%;height:260px;margin:2%;border-radius:10px;border:1px solid rgba(0,0,0,0.3);}
+#bottom_right ul li{width:80px;height:80px;background:red;margin:3px 15px;float:left;}
+#bottom_right ul li img{width:80px;height:80px;}
